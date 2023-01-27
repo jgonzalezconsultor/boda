@@ -1,8 +1,9 @@
 $( document ).ready(function() {
+    alert("Llega")
     var familia = new Object();
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/familias",
+        url: "http://18.206.229.200:8080/api/v1/familias",
         dataType: "json",
         success:function(data){
             $.each(data, function(i, item){  
@@ -20,7 +21,7 @@ function definirInvitados(element){
     var id = $('#familias').find(":selected").val();
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/familias/" + id,
+        url: "http://18.206.229.200:8080/api/v1/familias/" + id,
         dataType: "json",
         success:function(data){
             $.each(data, function(i, item){  
