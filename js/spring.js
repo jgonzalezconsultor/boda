@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    alert("Llega")
     var familia = new Object();
     $.ajax({
         type: "GET",
